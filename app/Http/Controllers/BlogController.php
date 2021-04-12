@@ -159,7 +159,7 @@ class BlogController extends Controller
     }
 
     public function admingetall() {
-        $blogs = Blog::orderBy('created_at', 'DESC')->paginate(2);
+        $blogs = Blog::orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.blogs', compact('blogs'));
     }
 
